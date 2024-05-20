@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "color_teams",
+  "info": {
+    "singularName": "color-team",
+    "pluralName": "color-teams",
+    "displayName": "colorTeam"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "backgroundColor": {
+      "type": "string"
+    }
+  }
+}

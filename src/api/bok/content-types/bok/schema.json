@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "boks",
+  "info": {
+    "singularName": "bok",
+    "pluralName": "boks",
+    "displayName": "bok",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Titel": {
+      "type": "string"
+    },
+    "Author": {
+      "type": "string"
+    },
+    "Pages": {
+      "type": "integer"
+    },
+    "Utgivningdatum": {
+      "type": "date"
+    },
+    "BookCover": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "betygs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::betyg.betyg",
+      "mappedBy": "bok"
+    },
+    "gillats": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::gillat.gillat",
+      "mappedBy": "bok"
+    }
+  }
+}

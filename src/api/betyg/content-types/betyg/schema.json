@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "betygs",
+  "info": {
+    "singularName": "betyg",
+    "pluralName": "betygs",
+    "displayName": "Betyg",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Betyg": {
+      "type": "integer",
+      "max": 5,
+      "min": 1
+    },
+    "bok": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::bok.bok",
+      "inversedBy": "betygs"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "betygs"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "gillats",
+  "info": {
+    "singularName": "gillat",
+    "pluralName": "gillats",
+    "displayName": "gillat"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "bok": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::bok.bok",
+      "inversedBy": "gillats"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "gillats"
+    }
+  }
+}
